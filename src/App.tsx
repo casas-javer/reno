@@ -57,10 +57,12 @@ function App() {
         <div className="container mx-auto p-4 lg:w-5/6 flex justify-between items-center flex-wrap">
           {/* <img width={250} src={logo} alt="Logo" /> */}
           <svg
+            width="100%"
+            height="auto"
             id="Capa_2"
             data-name="Capa 2"
             viewBox="0 0 609.02 153.44"
-            className="fill-current text-light-mode dark:text-dark-mode max-w-60"
+            className="w-60  fill-current text-light-mode dark:text-dark-mode max-w-60"
             xmlns="http://www.w3.org/2000/svg"
 
             fill="currentColor"
