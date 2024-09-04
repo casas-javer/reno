@@ -7,7 +7,7 @@ import { z } from "zod"
 import './App.css'
 import { ThemeProvider } from './components/theme-provider'
 // import { ModeToggle } from './components/mode-toggle'
-import logo from './assets/logo.svg'
+// import logo from './assets/logo.svg'
 import { Button } from './components/ui/button'
 import {
   Form,
@@ -55,7 +55,36 @@ function App() {
 
       <section className="bg-slate-100 dark:bg-slate-900 ">
         <div className="container mx-auto p-4 lg:w-5/6 flex justify-between items-center flex-wrap">
-          <img width={250} src={logo} alt="Logo" />
+          {/* <img width={250} src={logo} alt="Logo" /> */}
+          <svg
+            id="Capa_2"
+            data-name="Capa 2"
+            width="214.85mm"
+            height="54.13mm"
+            viewBox="0 0 609.02 153.44"
+            className="fill-current text-light-mode dark:text-dark-mode max-w-60"
+            xmlns="http://www.w3.org/2000/svg"
+
+            fill="currentColor"
+            stroke="none"
+
+          >
+            <g id="Capa_1-2" data-name="Capa 1">
+              <g>
+                <path d="M326.83,110.1h18.97l-43.49-70.28h-19.55l-47.96,70.28h16.23l11.93-17.43h53.08l10.78,17.43ZM269.14,83.66l21.72-31.73,19.62,31.73h-41.34Z" stroke="currentColor" />
+                <polygon stroke="currentColor" points="340.1 39.82 379.93 97.99 415.9 39.82 434.87 39.82 391.38 110.1 371.83 110.1 323.87 39.82 340.1 39.82" />
+                <g>
+                  <polygon className="text-red-500" points="12.33 92.74 59.46 92.7 112.6 17.89 124.59 35.94 71.92 110.2 24.28 110.02 12.33 92.74" />
+                  <polygon className="text-red-500" points="32 121.74 79.07 121.49 131.99 46.97 144.09 65.02 91.52 139.02 43.8 138.88 32 121.74" />
+                  <polygon className="text-red-500" points="53.35 153.31 57.95 146.79 96.2 146.79 144.25 78.83 153.37 78.96 100.95 153.44 53.35 153.31" />
+                  <polygon className="text-red-500" points="0 74.74 52.88 0 100.73 .03 47.88 74.74 0 74.74" />
+                </g>
+                <polygon points="514.45 48.84 514.45 39.82 511.45 39.82 461.07 39.82 452.86 39.82 444.29 39.82 444.29 110.1 444.29 110.1 514.45 110.1 514.45 110.1 514.45 103.18 514.45 101.09 461.07 101.09 461.07 79.47 503.39 79.47 503.39 70.45 461.07 70.45 461.07 48.84 514.45 48.84" />
+                <path d="M582.13,79.47h.85c10.94-.11,19.78-8.94,19.78-19.82s-8.94-19.82-19.97-19.82h-54.98v70.28h16.78v-30.63h18.94l26.23,30.31h19.26l-26.89-30.31ZM548.57,70.7h-3.98v-21.86h30.14c6.04,0,10.93,4.89,10.93,10.93s-4.89,10.93-10.93,10.93h-26.16Z" />
+                <path className=" fill-current" d="M210.6,39.82s-.04,38.04-.04,60.68c-.26,21.51-30.62,16.01-36.67,13.94v9.36c5.23,1.23,53.49,11.08,53.49-22.88v-61.11h-16.78Z" />
+              </g>
+            </g>
+          </svg>
 
           <ModeToggle />
 
