@@ -53,7 +53,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 
-      <section className="bg-slate-100 dark:bg-slate-900 ">
+      <section className="bg-slate-100 dark:bg-slate-900 pt-5">
         <div className="container mx-auto p-4 lg:w-5/6 flex justify-between items-center flex-wrap">
           {/* <img width={250} src={logo} alt="Logo" /> */}
           <svg
@@ -93,7 +93,7 @@ function App() {
 
 
 
-      <section className="bg-slate-100 dark:bg-slate-900 ">
+      <section className="bg-slate-100 dark:bg-slate-900">
         <div className="container mx-auto p-4 lg:w-5/6">
           <div className="grid grid-cols-1 md:grid-cols-[2fr,3fr] gap-4 py-12">
             <div className=" text-white mb-8 sm:mb-0">
