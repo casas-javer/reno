@@ -54,13 +54,12 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 
       <section className="bg-slate-100 dark:bg-slate-900 ">
-        <div className="container mx-auto p-4">
-          <div className="bg-slate-100 dark:bg-slate-900 flex items-center justify-center p-4 relative">
-            <img width={200} src={logo} alt="Logo" className="absolute left-1/2 transform -translate-x-1/2" />
-            <div className="ml-auto">
-              <ModeToggle />
-            </div>
-          </div>
+        <div className="container mx-auto p-4 lg:w-5/6 flex justify-between items-center flex-wrap">
+          <img width={250} src={logo} alt="Logo" />
+
+          <ModeToggle />
+
+
         </div>
       </section>
 
@@ -68,9 +67,9 @@ function App() {
 
 
       <section className="bg-slate-100 dark:bg-slate-900 ">
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4 lg:w-5/6">
           <div className="grid grid-cols-1 md:grid-cols-[2fr,3fr] gap-4 py-12">
-            <div className=" text-white ">
+            <div className=" text-white mb-8 sm:mb-0">
               <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl  text-gray-900 mb-4 dark:text-gray-300  ">
                 Crédito Fovissste
               </h1>
@@ -114,7 +113,7 @@ function App() {
             </div>
             <div className="text-white">
               <iframe
-                className="ml-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl"
+                className="ml-auto w-full lg:max-w-2xl h-64 rounded-lg sm:h-96 shadow-xl"
                 src="https://www.youtube.com/embed/vri5jwbG7xo?si=wYvjmcl35JM-nDYC"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -125,7 +124,7 @@ function App() {
 
       </section>
 
-      <section className=" container mx-auto p-4 py-8 pt-12">
+      <section className=" container mx-auto p-4 py-8 pt-12 lg:w-5/6">
         <p className="text-gray-400">
           <span className="font-bold">El FOVISSSTE (Fondo de la Vivienda del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado)</span> es una entidad mexicana que forma parte del ISSSTE (Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado). Su principal objetivo es ofrecer créditos hipotecarios a los trabajadores del sector público para la adquisición, construcción, ampliación, reparación o mejora de viviendas.
         </p>
@@ -134,9 +133,9 @@ function App() {
       </section>
 
       <section className="mb-10">
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-4 lg:w-5/6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
-            <div >
+            <div className="md:pr-5">
               <h2 className=" text-gray-900 dark:text-gray-300 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 my-5 ">
                 Tipos de Créditos del FOVISSSTE
               </h2>
