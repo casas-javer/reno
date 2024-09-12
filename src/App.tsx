@@ -1,52 +1,21 @@
-"use client"
-
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
 // import { useState } from 'react'
 import './App.css'
 import { ThemeProvider } from './components/theme-provider'
 // import { ModeToggle } from './components/mode-toggle'
 // import logo from './assets/logo.svg'
-import { Button } from './components/ui/button'
-import {
-  Form,
-  FormControl,
-  // FormDescription,
-  FormField,
-  FormItem,
-  // FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+
 import { ModeToggle } from "./components/mode-toggle"
 import foviste from './assets/foviste-gob.jpg'
+import Formulario from './components/formulario'
 
 
 
 
-const formSchema = z.object({
-  name: z.string().min(4, {
-    message: "El nombre debe tener al menos 4 carácteres",
-  }),
-})
+
+
 
 function App() {
-  // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-    },
-  })
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
-  }
 
   // const [count, setCount] = useState(0)
 
@@ -58,16 +27,14 @@ function App() {
           {/* <img width={250} src={logo} alt="Logo" /> */}
           <svg
             width="100%"
-            height="auto"
+            height="100"
             id="Capa_2"
             data-name="Capa 2"
             viewBox="0 0 609.02 153.44"
             className="w-60  fill-current text-light-mode dark:text-dark-mode max-w-60"
             xmlns="http://www.w3.org/2000/svg"
-
             fill="currentColor"
             stroke="none"
-
           >
             <g id="Capa_1-2" data-name="Capa 1">
               <g>
@@ -104,39 +71,7 @@ function App() {
               </h1>
               <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Todo lo que necesitas saber sobre en nuevo esquema crediticio "FOVISSSTE para Todos" está en este vídeo. ¡Compartelo!</p>
 
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input className="bg-white h-12" placeholder="Nombre completo" {...field} />
-                        </FormControl>
-                        <FormControl>
-                          <Input className="bg-white h-12" placeholder="Correo electrónico" {...field} />
-                        </FormControl>
-                        <FormControl>
-                          <Input className="bg-white h-12" placeholder="Teléfono" {...field} />
-                        </FormControl>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Escribe tu mensaje"
-                            className="resize-none bg-white"
-                            {...field}
-                          />
-                        </FormControl>
-
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button className="w-full mt-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 h-15" type="submit">Solicitar información                 <svg className="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                  </svg></Button>
-                </form>
-              </Form>
+              <Formulario />
 
 
             </div>
@@ -185,7 +120,7 @@ function App() {
 
       </section>
 
-      <section className="bg-slate-100 dark:bg-slate-900 flex items-center justify-center min-h-screen p-4 py-14">
+      <section className="bg-slate-100 dark:bg-slate-900 flex items-center justify-center min-h-screen p-4">
         <div className="w-full max-w-lg bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white text-center">
             Solicita información
@@ -194,9 +129,9 @@ function App() {
             Completa el siguiente formulario para ponerte en contacto con nosotros.
           </p>
           {/* Aquí va el formulario */}
-          <form>
+          {/* <form>
             <div className="space-y-4">
-              {/* Ejemplo de un campo de entrada */}
+              Ejemplo de un campo de entrada
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 mb-2">Nombre</label>
                 <input
@@ -205,7 +140,7 @@ function App() {
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-slate-700 dark:text-white"
                 />
               </div>
-              {/* Añadir más campos según sea necesario */}
+              Añadir más campos según sea necesario
               <div>
                 <label className="block text-gray-700 dark:text-gray-300 mb-2">Correo electrónico</label>
                 <input
@@ -226,7 +161,8 @@ function App() {
             <button type="submit" className="w-full mt-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
               Enviar
             </button>
-          </form>
+          </form> */}
+          <Formulario />
         </div>
       </section>
 
