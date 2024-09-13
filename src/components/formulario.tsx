@@ -117,7 +117,7 @@ function Formulario() {
                         <FormItem className="text-gray-500 btn_form">
                             <FormControl>
                                 <Select onValueChange={field.onChange} value={field.value}>
-                                    <SelectTrigger className="bg-white h-12">
+                                    <SelectTrigger aria-label="Selecciona un estado" className="bg-white h-12">
                                         <SelectValue placeholder="Selecciona estado de interés" />
                                     </SelectTrigger>
                                     <SelectContent>
