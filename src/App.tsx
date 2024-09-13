@@ -6,7 +6,8 @@ import { ThemeProvider } from './components/theme-provider'
 // import logo from './assets/logo.svg'
 
 import { ModeToggle } from "./components/mode-toggle"
-import foviste from './assets/foviste-gob.jpg'
+import fovisteWebp from './assets/foviste-gob.webp';
+import fovisteJpg from './assets/foviste-gob.jpg';
 import Formulario from './components/formulario'
 import '@justinribeiro/lite-youtube';
 
@@ -123,8 +124,11 @@ function App() {
               </ul>
             </div>
             <div className=" text-white ">
-              <img className="d" width={800} src={foviste} alt="foviste" />
-
+              <picture>
+                <source srcSet={fovisteWebp} type="image/webp" />
+                <source srcSet={fovisteJpg} type="image/jpeg" />
+                <img className="d" width={800} height={400} src={fovisteJpg} alt="foviste" />
+              </picture>
             </div>
           </div>
         </div>
