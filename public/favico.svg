@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 31.9 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e20e17;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Capa_1">
+      <g id="Capa_1-2">
+        <g>
+          <polygon class="cls-1" points="3.4 19.1 12.6 19.1 22.9 4.5 25.3 8.1 15 22.5 5.7 22.5 3.4 19.1"/>
+          <polygon class="cls-1" points="7.2 24.8 16.4 24.7 26.7 10.2 29.1 13.7 18.8 28.1 9.5 28.1 7.2 24.8"/>
+          <polygon class="cls-1" points="11.4 30.9 12.3 29.7 19.7 29.7 29.1 16.4 30.9 16.4 20.7 30.9 11.4 30.9"/>
+          <polygon class="cls-1" points="1 15.6 11.3 1.1 20.6 1.1 10.3 15.6 1 15.6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
