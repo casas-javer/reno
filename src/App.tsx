@@ -1,4 +1,5 @@
 // import { useState } from 'react'
+import { useRef, useEffect } from 'react';
 import './App.css'
 import { ThemeProvider } from './components/theme-provider'
 // import { ModeToggle } from './components/mode-toggle'
@@ -7,6 +8,7 @@ import { ThemeProvider } from './components/theme-provider'
 import { ModeToggle } from "./components/mode-toggle"
 import foviste from './assets/foviste-gob.jpg'
 import Formulario from './components/formulario'
+import '@justinribeiro/lite-youtube';
 
 
 
@@ -15,8 +17,15 @@ import Formulario from './components/formulario'
 
 
 function App() {
+  // Definir el ref como tipo HTMLElement
+  const youtubeRef = useRef<HTMLElement | null>(null);
 
-
+  useEffect(() => {
+    if (youtubeRef.current) {
+      // Manipular el atributo 'class' directamente en el Web Component
+      youtubeRef.current.setAttribute('class', 'ml-auto w-full lg:max-w-2xl h-64 rounded-lg sm:h-96 shadow-xl');
+    }
+  }, []);
   // const [count, setCount] = useState(0)
 
   return (
@@ -76,12 +85,14 @@ function App() {
 
             </div>
             <div className="text-white">
-              <iframe
+              {/* <iframe
                 className="ml-auto w-full lg:max-w-2xl h-64 rounded-lg sm:h-96 shadow-xl"
                 src="https://www.youtube.com/embed/vri5jwbG7xo?si=wYvjmcl35JM-nDYC"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              ></iframe> */}
+              <lite-youtube ref={youtubeRef} videoid="vri5jwbG7xo">
+              </lite-youtube>
             </div>
           </div>
         </div>
