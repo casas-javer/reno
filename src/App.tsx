@@ -1,15 +1,23 @@
 // import { useState } from 'react'
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
+
+
 import './App.css'
 import { ThemeProvider } from './components/theme-provider'
 import { ModeToggle } from "./components/mode-toggle"
-import fovisteWebp from './assets/foviste-gob.webp';
-import fovisteJpg from './assets/foviste-gob.jpg';
+
 import Formulario from './components/formulario'
 import '@justinribeiro/lite-youtube';
 import { Logo } from './components/logo';
+// import { Imagen } from './components/imagen';
 
-function App() {
+
+// import { Skeleton } from '@/components/ui/skeleton';
+import ImageWithSkeleton from './components/imageWithSkeleton';
+
+// const Imagen = lazy(() => import('./components/imagen'));
+
+const App: React.FC = () => {
   // Definir el ref como tipo HTMLElement
   const youtubeRef = useRef<HTMLElement | null>(null);
 
@@ -90,11 +98,16 @@ function App() {
               </ul>
             </div>
             <div className=" text-white ">
-              <picture>
-                <source srcSet={fovisteWebp} type="image/webp" />
-                <source srcSet={fovisteJpg} type="image/jpeg" />
-                <img className="d" width={800} height={400} src={fovisteJpg} alt="foviste" />
-              </picture>
+
+
+
+
+              {/* <Imagen /> */}
+              <ImageWithSkeleton
+                width={800}
+                height={800}
+              />
+
             </div>
           </div>
         </div>
