@@ -1,25 +1,19 @@
 import './App.css'
 import { ThemeProvider } from './components/theme-provider'
-import { ModeToggle } from "./components/mode-toggle"
 
 import Formulario from './components/formulario'
 import '@justinribeiro/lite-youtube';
-import { Logo } from './components/logo';
 
 import ImageWithSkeleton from './components/imageWithSkeleton';
 import VideoWithSkeleton from './components/videoWithSkeleton';
+import { Menu } from './components/menu';
 
 const App: React.FC = () => {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 
-      <section className="bg-slate-100 dark:bg-slate-900 pt-5">
-        <div className="container mx-auto p-4 lg:w-5/6 flex justify-between items-center flex-wrap">
-          <Logo />
-          <ModeToggle />
-        </div>
-      </section>
+      <Menu />
 
       <section className="bg-slate-100 dark:bg-slate-900">
         <div className="container mx-auto p-4 lg:w-5/6">
