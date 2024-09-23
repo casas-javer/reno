@@ -82,9 +82,6 @@ export const ContactForm = ({ className }: ContactFormProps) => {
         )
           .then((_response) => {
             resetForm();
-            const searchParams = new URLSearchParams(
-              location.search
-            ).toString();
 
             // Redirigir directamente a la página de gracias
             window.location.href = "https://www.javer.com.mx/gracias";
