@@ -126,7 +126,7 @@ export const FovisssteForm = () => {
                     </div> */}
                     <div className="col-span-1 sm:col-span-2">
                         <ReCAPTCHA
-                            sitekey="6LcKQOocAAAAAMz5X3c9pxRyCRKNaNKQO0uI4p19"
+                            sitekey="6LdFGE0qAAAAAGlRpsy0wD4vDGE0q4XogpvPhHUV"
                             onChange={async (e) => {
                                 await setFieldValue("recaptcha", e);
                             }}
