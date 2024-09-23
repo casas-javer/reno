@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+// import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -95,56 +95,54 @@ export const ContactForm = ({ className }: ContactFormProps) => {
     >
       {({ getFieldProps, setFieldValue, isValid }) => (
         <Form
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-4 w-full ${className}`}
+          className={`text-gray-500 dark:text-gray-400 w-full ${className}`}
         >
           <div>
-            <Label htmlFor="firstName">nombre</Label>
-            <Input {...getFieldProps("firstName")} />
+            <Input {...getFieldProps("firstName")} className="bg-white h-12" placeholder="Nombre completo" />
           </div>
-          <div>
+          {/* <div>
             <Label htmlFor="lastName">Apellido</Label>
             <Input {...getFieldProps("lastName")} />
-          </div>
+          </div> */}
           <div className="col-span-1 sm:col-span-2">
-            <Label htmlFor="email">Correo</Label>
-            <Input {...getFieldProps("email")} />
+            {/* <Label htmlFor="email">Correo</Label> */}
+            <Input {...getFieldProps("email")} className="bg-white h-12" placeholder="Correo electrónico" />
           </div>
           <div>
-            <Label htmlFor="phone">Teléfono</Label>
-            <Input {...getFieldProps("phone")} />
+
+            <Input {...getFieldProps("phone")} className="bg-white h-12" placeholder="Teléfono" />
           </div>
           <div>
-            <Label htmlFor="typeOfCredit">Tipo de crédito</Label>
+            {/* <Label htmlFor="typeOfCredit">Tipo de crédito</Label> */}
             <Select
               name="typeOfCredit"
               onValueChange={(value) => {
                 setFieldValue("typeOfCredit", value);
               }}
+
             >
               <SelectTrigger>
-                <SelectValue placeholder="Selecciona una opción" />
+                <SelectValue placeholder="Selecciona estado de interés" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="-">--Ninguno--</SelectItem>
-                <SelectItem value="INFONAVIT">INFONAVIT</SelectItem>
-                <SelectItem value="ISSSTELEON">ISSSTELEON</SelectItem>
-                <SelectItem value="SHF/BANCO">SHF/BANCO</SelectItem>
-                <SelectItem value="BANCO - SOFOL">BANCO - SOFOL</SelectItem>
-                <SelectItem value="COFINAVIT">COFINAVIT</SelectItem>
-                <SelectItem value="CONTADO">CONTADO</SelectItem>
-                <SelectItem value="FOVISSSTE">FOVISSSTE</SelectItem>
-                <SelectItem value="OTROS / NO SE">OTROS / NO SE</SelectItem>
-                <SelectItem value="BANJERCITO">BANJERCITO</SelectItem>
-                <SelectItem value="ISSFAM">ISSFAM</SelectItem>
-                <SelectItem value="PENSIONES">PENSIONES</SelectItem>
+                <SelectItem value="Nuevo_Leon">Nuevo León</SelectItem>
+                <SelectItem value="Aguascalientes">Aguascalientes</SelectItem>
+                <SelectItem value="Estado_Mexico">Estado de México</SelectItem>
+                <SelectItem value="Jalisco">Jalisco</SelectItem>
+                <SelectItem value="Puebla">Puebla</SelectItem>
+                <SelectItem value="Querétaro">Querétaro</SelectItem>
+                <SelectItem value="Quintana_Roo">Quintana Roo</SelectItem>
+                <SelectItem value="Tamaulipas">Tamaulipas</SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="col-span-1 sm:col-span-2">
-            <Label htmlFor="message">Mensaje</Label>
+            {/* <Label htmlFor="message">Mensaje</Label> */}
             <Textarea
               placeholder="Escribe un mensaje"
               {...getFieldProps("message")}
+              className="bg-white"
             />
           </div>
 
@@ -160,10 +158,24 @@ export const ContactForm = ({ className }: ContactFormProps) => {
             <Button
               size="lg"
               type="submit"
-              className="w-full md:w-fit"
+              className="w-full mt-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 h-15"
               disabled={!isValid}
             >
-              Enviar
+              Solicitar información                     <svg
+                className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
             </Button>
           </div>
         </Form>

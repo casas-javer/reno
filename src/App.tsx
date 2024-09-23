@@ -7,7 +7,8 @@ import '@justinribeiro/lite-youtube';
 import ImageWithSkeleton from './components/imageWithSkeleton';
 import VideoWithSkeleton from './components/videoWithSkeleton';
 import { Menu } from './components/menu';
-import { ContactForm } from './components/ContactForm';
+// import { ContactForm } from './components/ContactForm';
+import { ContactForm3 } from './components/ContactForm3';
 
 const App: React.FC = () => {
 
@@ -26,7 +27,8 @@ const App: React.FC = () => {
               <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Todo lo que necesitas saber sobre en nuevo esquema crediticio "FOVISSSTE para Todos" está en este vídeo. ¡Compartelo!</p>
 
               <Formulario />
-              <ContactForm />
+              {/* <ContactForm /> */}
+              <ContactForm3 />
 
             </div>
             <div className="text-white">
