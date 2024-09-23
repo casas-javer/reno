@@ -56,7 +56,7 @@ const FormComponent: React.FC = () => {
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: formData.toString(),
-                mode: 'no-cors', // Añade esta opción para deshabilitar CORS
+                // mode: 'no-cors',
             });
 
             if (response.ok) {
